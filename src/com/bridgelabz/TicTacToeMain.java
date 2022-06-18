@@ -9,7 +9,9 @@ public class TicTacToeMain {
         TicTacToeImpl.toeBoard();
         TicTacToeImpl.showBoard();
         userTurn = TicTacToeImpl.user(scanner);
-        computerTurn =  ((userTurn == 'X') ? 'O' : 'X');
+        computerTurn = (userTurn == 'X')? 'O' :  'X';
         TicTacToeImpl.moveLocation(userTurn);
+        TicTacToeImpl.comLocation(computerTurn);
+        TicTacToeImpl.showBoard();
     }
 }

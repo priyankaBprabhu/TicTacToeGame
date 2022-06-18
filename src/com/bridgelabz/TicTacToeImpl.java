@@ -1,10 +1,12 @@
 package com.bridgelabz;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToeImpl {
     public static int userPos;
+    public static int computerPos;
     public static Scanner scanner = new Scanner(System.in);
 
     public static char[] gameArray = new char[10];
@@ -26,7 +28,6 @@ public class TicTacToeImpl {
     }
 
     public static void moveLocation(char userTurn) {
-        if (userTurn == 'X') {
             System.out.println("\n Select the position in a board from [1-9]");
             userPos = scanner.nextInt();
 
@@ -81,5 +82,61 @@ public class TicTacToeImpl {
                     break;
             }
         }
+
+        public static void comLocation(char computerTurn){
+                Random random = new Random();
+                computerPos = random.nextInt(9);
+
+                switch (computerPos) {
+                    case 0:
+                        if (gameArray[0] == ' ') {
+                            gameArray[0] = computerTurn;
+                        }
+                        break;
+                    case 1:
+                        if (gameArray[1] == ' ') {
+                            gameArray[1] = computerTurn;
+                        }
+                        break;
+                    case 2:
+                        if (gameArray[2] == ' ') {
+                            gameArray[2] = computerTurn;
+                        }
+                        break;
+                    case 3:
+                        if (gameArray[3] == ' ') {
+                            gameArray[3] = computerTurn;
+                        }
+                        break;
+                    case 4:
+                        if (gameArray[4] == ' ') {
+                            gameArray[4] = computerTurn;
+                        }
+                        break;
+                    case 5:
+                        if (gameArray[5] == ' ') {
+                            gameArray[5] = computerTurn;
+                        }
+                        break;
+                    case 6:
+                        if (gameArray[6] == ' ') {
+                            gameArray[6] = computerTurn;
+                        }
+                        break;
+                    case 7:
+                        if (gameArray[7] == ' ') {
+                            gameArray[7] = computerTurn;
+                        }
+                        break;
+                    case 8:
+                        if (gameArray[8] == ' ') {
+                            gameArray[8] = computerTurn;
+                        }
+                        break;
+                }
+
     }
+
 }
+
+

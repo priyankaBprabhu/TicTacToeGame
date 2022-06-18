@@ -11,7 +11,5 @@ public class TicTacToeMain {
         userTurn = TicTacToeImpl.user(scanner);
         computerTurn =  ((userTurn == 'X') ? 'O' : 'X');
         TicTacToeImpl.moveLocation(userTurn);
-        TicTacToeImpl.showBoard();
-
     }
 }
